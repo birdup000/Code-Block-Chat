@@ -43,13 +43,14 @@ const App = () => {
                 <h1>Code Block Chat</h1>
             </header>
             <div className="chat-input">
-                <textarea
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    placeholder="Type your message here..."
-                />
-                <button onClick={handleSend}>Send</button>
-            </div>
+    <textarea
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Type your message here..."
+    />
+    <button className="send-button" onClick={handleSend}>Send</button>
+</div>
+
             <div className="chat-output">
                 {messages.map((message, index) => (
                     <Message 
